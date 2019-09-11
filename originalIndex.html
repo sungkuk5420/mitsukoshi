@@ -1,0 +1,58 @@
+<html>
+  <head> 
+    <meta charset="UTF-8"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"> 
+    <meta http-equiv="X-UA-Compatible" content="ie=edge"> 
+    <title>SWTT DEMO APP</title> 
+    <link rel="pwa-setup" href="/manifest.json"> 
+    <link rel="stylesheet" href="./assest/stylesheets/style.scss">
+  </head>
+  <body> 
+    aaaaa
+    <script src="./assest/javascripts/index.js"></script>
+    <script src="./pwacompat.js"></script>
+    <script>
+        var iOS = !!navigator.platform && /iPhone|iPod/.test(navigator.platform);
+        if (iOS) {
+            document.querySelector('link[rel="manifest"]').setAttribute("rel", "no-on-ios");
+        }
+        const isIos = () => {
+            const userAgent = window.navigator.userAgent.toLowerCase();
+            return /iphone|ipad|ipod/.test(userAgent);
+        }
+        // Detects if device is in standalone mode
+        const isInStandaloneMode = () => ('standalone' in window.navigator) && (window.navigator.standalone);
+
+        // Checks if should display install popup notification:
+        if (isIos() && isInStandaloneMode()) {
+            //window.location.href = "https://isvsi-14ddd2ecd93-162f89c5e8-1666011d547.force.com/unileveripmipad/s/";
+        }
+
+        function OpenLink(theLink, event) {
+            window.location.href = theLink.href;
+        }
+        var a = document.getElementsByTagName("a");
+        for (var i = 0; i < a.length; i++) {
+            a[i].onclick = function () {
+                event.preventDefault();
+                window.location = this.getAttribute("href");
+                return false
+            }
+        }
+    </script>
+    <script>
+        (function (a, b, c) {
+            if (c in b && b[c]) {
+                var d, e = a.location,
+                    f = /^(a|html)$/i;
+                a.addEventListener("click", function (a) {
+                    d = a.target;
+                    while (!f.test(d.nodeName)) d = d.parentNode;
+                    "href" in d && (d.href.indexOf("http") || ~d.href.indexOf(e.host)) && (a.preventDefault(),
+                        e.href = d.href)
+                }, !1)
+            }
+        })(document, window.navigator, "standalone")
+    </script>
+  </body>
+</html>

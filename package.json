@@ -1,0 +1,32 @@
+{
+  "name": "SWTT-demo-app",
+  "version": "1.0.0",
+  "description": "### parcel 追加 ``` npm install -g parcel-bundler ```",
+  "main": "index.js",
+  "scripts": {
+    "dev": "parcel originalIndex.html",
+    "build": "parcel build originalIndex.html"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sungkuk5420/SWTT-demo-app.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sungkuk5420/SWTT-demo-app/issues"
+  },
+  "homepage": "https://github.com/sungkuk5420/SWTT-demo-app#readme",
+  "devDependencies": {
+    "cssnano": "^4.1.10",
+    "parcel-plugin-sw-precache": "^1.1.1",
+    "postcss-custom-properties": "^9.0.2",
+    "sass": "^1.23.0-module.beta.1"
+  },
+  "dependencies": {
+    "autoprefixer": "^9.6.1",
+    "node-static": "^0.7.11",
+    "postcss-modules": "^1.4.1"
+  }
+}
