@@ -6,16 +6,49 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>SWTT DEMO APP</title>
     <link rel="pwa-setup" href="./manifest.json">
-    <link rel="stylesheet" href="./dist/style.53459be4.css">
+    <link rel="stylesheet" href="./dist/style.86b24c28.css">
 </head>
 
-<body> 
-    <a href="#" onclick="movePage()">aaaaa</a>
-    <script>
-        window.movePage = function(){
-            window.location.href='https://www.yahoo.co.jp/';
-        }
-    </script>
+<body>
+    <div class="page-image page1">
+        <div class="menu" onclick="handleClickMenu()"></div>
+    </div>
+    <div class="page-image page2">
+        <div class="serviceBooking" onclick="handleClickServiceBooking()"></div>
+    </div>
+    <div class="scroll-area page3-4 hide">
+        <div class="page-image page3"></div>
+        <div class="page-image page4">
+            <div class="booking" onclick="handleClickBooking()"></div>
+        </div>
+    </div>
+    <div class="page-image page5 hide">
+        <div class="attendBooking" onclick="handleClickAttendBooking()"></div>
+    </div>
+    <div class="scroll-area page6-7 hide">
+        <div class="page-image page6"></div>
+        <div class="page-image page7">
+            <div class="booking13" onclick="handleClick13Booking()"></div>
+        </div>
+    </div>
+    <div class="page-image page8 hide">
+        <div class="page8__name">山田 祐子</div>
+        <div class="page8__date">2019/09/01 13:00 ~ 14:00</div>
+        <div class="page8__next" onclick="handleClickNextOnPage8()"></div>
+    </div>
+    <div class="scroll-area page9-10 hide">
+        <div class="page-image page9"></div>
+        <div class="page-image page10">
+            <div class="page10__next" onclick="handleClickNextOnPage10()"></div>
+        </div>
+    </div>
+    <div class="page-image page11">
+        <div class="page11__message">予約が完了しました。</div>
+        <div class="page11__message">ご来店お待ちしております。</div>
+    </div>
+    <script src="./dist/javascripts.41c30d4a.js"></script>
+    <script src="./dist/pwacompat.48bb83d7.js"></script>
+    <script>var t = !!navigator.platform && /iPhone|iPod/.test(navigator.platform); t && document.querySelector('link[rel="manifest"]').setAttribute("rel", "no-on-ios"); var n = function () { var t = window.navigator.userAgent.toLowerCase(); return /iphone|ipad|ipod/.test(t) }, e = function () { return "standalone" in window.navigator && window.navigator.standalone }; function o(t, n) { window.location.href = t.href } n() && e(); for (var i = document.getElementsByTagName("a"), r = 0; r < i.length; r++)i[r].onclick = function () { return event.preventDefault(), window.location = this.getAttribute("href"), !1 }; !function (t, n, e) { if (e in n && n[e]) { var o, i = t.location, r = /^(a|html)$/i; t.addEventListener("click", function (t) { for (o = t.target; !r.test(o.nodeName);)o = o.parentNode; "href" in o && (o.href.indexOf("http") || ~o.href.indexOf(i.host)) && (t.preventDefault(), i.href = o.href) }, !1) } }(document, window.navigator, "standalone");</script>
 </body>
 
 </html>
