@@ -128,27 +128,27 @@ module.exports = {
   "icons": [{
     "src": "./assest/images/swtt-icon.jpg",
     "sizes": "48x48",
-    "type": "image/png"
+    "type": "image/jpg"
   }, {
     "src": "./assest/images/swtt-icon.jpg",
     "sizes": "72x72",
-    "type": "image/png"
+    "type": "image/jpg"
   }, {
     "src": "./assest/images/swtt-icon.jpg",
     "sizes": "96x96",
-    "type": "image/png"
+    "type": "image/jpg"
   }, {
     "src": "./assest/images/swtt-icon.jpg",
     "sizes": "144x144",
-    "type": "image/png"
+    "type": "image/jpg"
   }, {
     "src": "./assest/images/swtt-icon.jpg",
     "sizes": "168x168",
-    "type": "image/png"
+    "type": "image/jpg"
   }, {
     "src": "./assest/images/swtt-icon.jpg",
     "sizes": "192x192",
-    "type": "image/png"
+    "type": "image/jpg"
   }],
   "related_applications": [{
     "platform": "play",
@@ -183,7 +183,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "62386" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "60796" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

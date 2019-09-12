@@ -3,53 +3,174 @@
 }
 body{
     margin: 0;
+    overflow: hidden;
 }
 
-.progress {
-    background: rgba(255,255,255,0.1);
-    justify-content: flex-start;
-    border-radius: 100px;
-    align-items: center;
+.page-image{
+    width: 100vw;
+    height: 100vh;
+    margin: -1px -1px -1px -1px;
+    background-size: calc(100vw + 4px) calc(100vh + 20px);
+    background-position: -1px -19px;
     position: relative;
-    display: flex;
-    width: 100%;
-    height: 5px;
-    z-index: 1;
-    margin-top: 5px;
-  }
-  
-  .progress-value {
-    animation: load 5s ease-out forwards;
-    box-shadow: 0 10px 5px -10px #fff;
-    background: rgb(79, 159, 252);
-    height: 3px;
-    width: 0;
-  }
-  
-  @keyframes load {
-    0% { width: 0; }
-    100% { width: 100%; }
-  }
-  
-  .tooltip{
-      position: absolute;
-      width: 80px;
-      top: -49px;
-      left: -27px;
-      opacity: 1;
-      animation: fade 0.3s ease-out forwards;
-      &.hide{
-          opacity: 0;
-      }
-  }
-  
-  @keyframes fade {
+    &.page1{
+        background-image: url(../images/page1.png);
+        .menu{
+            position: absolute;
+            width: 14vw;
+            height: 14vw;
+        }
+    }
+    &.page2{
+        position: absolute;
+        top: 0;
+        width: 74vw;
+        margin-left: -74vw;
+        background-image: url(../images/page2.png);
+        &.show{
+            margin-left: 0;
+            animation: sidebar 0.3s ease-out forwards;   
+        }
+        .serviceBooking{
+            position: absolute;
+            width: 74vw;
+            height: 8vh;
+            bottom: 21.9vh;
+        }
+    }
+    &.page3{
+        height: 87vh;
+        background-image: url(../images/page3.png);
+    }
+    &.page4{
+        height: 82.5vh;
+        background-position: -1px -123vh;
+        background-image: url(../images/page4.png);
+        .booking{
+            position: absolute;
+            width: 48.3vw;
+            height: 7vh;
+            bottom: 32vh;
+            left: 42vw;
+        }
+    }
+    &.page5{
+        background-image: url(../images/page5.png);
+        background-size: 100vw 100vh;
+        background-position: 0 0;
+        .attendBooking{
+            position: absolute;
+            width: 100vw;
+            height: 8vh;
+            bottom: 33.3vh;
+        }
+    }
+    &.page6{
+        height: 52.5vh;
+        background-image: url(../images/page6.png);
+    }
+    &.page7{
+        height: 79.5vh;
+        background-position: -1px -125vh;
+        background-image: url(../images/page7.jpg);
+        .booking13{
+            position: absolute;
+            width: 100vw;
+            height: 8vh;
+            bottom: 9vh;
+        }
+    }
+    &.page8{
+        background-image: url(../images/page8.png);
+        .page8__name{
+            position: absolute;
+            top: 32.3vh;
+            background: white;
+            width: 50vw;
+            height: 7vh;
+            display: flex;
+            align-items: center;
+            font-size: 4.5vw;
+            font-weight: bold;
+            left: 29vw;
+            color: #282828;
+        }
+        .page8__date{
+            position: absolute;
+            top: 49.3vh;
+            background: white;
+            width: 61vw;
+            height: 7vh;
+            display: flex;
+            align-items: center;
+            font-size: 4.5vw;
+            left: 12vw;
+            color: #282828;
+            font-weight: 500;
+        }
+        .page8__next{
+            position: absolute;
+            bottom: 11.1vh;
+            width: 83.4vw;
+            height: 6vh;
+            left: 9vw;
+        }
+    }
+    &.page9{
+        width: calc(100vw + 2px);
+        height: 67.5vh;
+        background-image: url(../images/page9.jpg);
+    }
+    &.page10{
+        height: 32.5vh;
+        background-position: -1px -172vh;
+        background-image: url(../images/page10.png);
+        .page10__next{
+            position: absolute;
+            bottom: 11.1vh;
+            width: 83.4vw;
+            height: 6vh;
+            left: 9vw;
+        }
+    }
+    &.page11{
+        background-image: url(../images/page11.png);
+        .page11__message{
+            display: flex;
+            font-size: 6vw;
+            color: #282828;
+            font-weight: 700;
+            align-items: center;
+            width: 100vw;
+            justify-content: center;
+            top: 50vh;
+            position: absolute;
+            left:2vw;
+            &:first-child{
+                top: 46vh;
+            }
+        }
+    }
+    // &.page12{
+    //     background-image: url(../images/page12.png);
+    // }
+}
+
+.scroll-area{
+    overflow: scroll;
+    height: 100%;
+}
+
+
+@keyframes sidebar {
     0% { 
-        top: -40px;
-        opacity: 0; 
+        margin-left: -74vw;
     }
     100% { 
-        top: -49px;
-        opacity: 1; 
+        margin-left: 0;
     }
-  }
+}
+
+.hide{
+    display: none !important;
+}

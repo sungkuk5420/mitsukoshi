@@ -8,9 +8,43 @@
     <link rel="stylesheet" href="./assest/stylesheets/style.scss">
   </head>
   <body> 
-    <img src="/assest/images/img_logo-isetan-top.png">
-    <img src="/assest/images/img_logo-mitsukoshi-top.png">
-    <a href="https://www.yahoo.co.jp/"></a>
+    <!-- <img src="./assest/images/page1.png" class="page1"> -->
+    <div class="page-image page1">
+      <div class="menu" onclick="handleClickMenu()"></div>
+    </div>
+    <div class="page-image page2">
+      <div class="serviceBooking" onclick="handleClickServiceBooking()"></div>
+    </div>
+    <div class="scroll-area page3-4 hide">
+      <div class="page-image page3"></div>
+      <div class="page-image page4">
+        <div class="booking" onclick="handleClickBooking()"></div>
+      </div>
+    </div>
+    <div class="page-image page5 hide">
+        <div class="attendBooking" onclick="handleClickAttendBooking()"></div>
+    </div>
+    <div class="scroll-area page6-7 hide">
+      <div class="page-image page6"></div>
+      <div class="page-image page7">
+        <div class="booking13" onclick="handleClick13Booking()"></div>
+      </div>
+    </div>
+    <div class="page-image page8 hide">
+      <div class="page8__name">山田 祐子</div>
+      <div class="page8__date">2019/09/01 13:00 ~ 14:00</div>
+      <div class="page8__next" onclick="handleClickNextOnPage8()"></div>
+    </div>
+    <div class="scroll-area page9-10 hide">
+      <div class="page-image page9"></div>
+      <div class="page-image page10">
+        <div class="page10__next" onclick="handleClickNextOnPage10()"></div>
+      </div>
+    </div>
+    <div class="page-image page11">
+      <div class="page11__message">予約が完了しました。</div>
+      <div class="page11__message">ご来店お待ちしております。</div>
+    </div>
     <script src="./assest/javascripts/index.js"></script>
     <script src="./pwacompat.js"></script>
     <script>

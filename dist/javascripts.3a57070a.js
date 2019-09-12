@@ -118,157 +118,64 @@ parcelRequire = (function (modules, cache, entry, globalName) {
 
   return newRequire;
 })({"assest/javascripts/index.js":[function(require,module,exports) {
-var homeHeader = document.querySelector('.header.home');
-var feedHeader1 = document.querySelector('.header.feed1');
-var feedHeader2 = document.querySelector('.header.feed2');
-var feedHeader3 = document.querySelector('.header.feed3');
-var activityHeader = document.querySelector('.header.activity');
-var photoHeader = document.querySelector('.header.photo');
-var mainPage = document.querySelector('.page-container.main-page');
-var feedPage1 = document.querySelector('.page-container.feed-page1');
-var feedPage2 = document.querySelector('.page-container.feed-page2');
-var feedPage3 = document.querySelector('.page-container.feed-page3');
-var activityPage = document.querySelector('.page-container.activity-page');
-var photoPage = document.querySelector('.page-container.photo-page');
-var mainImage1 = document.querySelector('.main-image1');
-var mainImage2 = document.querySelector('.main-image2');
-var mainImage3 = document.querySelector('.main-image3');
-var imageSliderNav = document.querySelector('.image-slider-nav');
-var storeInfo = document.querySelector('.store-info');
-var contentUserName = document.querySelector('.store-info__content__name');
-var contentName = document.querySelector('.store-info__content__name2');
-var date = document.querySelector('.date-text .date');
-var contentText = document.querySelector('.content-text');
-var likeText = document.querySelector('.like-text');
-var feed3Textarea = feedPage3.querySelector('.form-wrapper textarea');
-var contentImage = document.querySelector('.store-info img');
-var contentImageShare = document.querySelector('.store-info img.share');
-var footer = document.querySelector('.footer');
-var progress = document.querySelector('.progress');
-var writeFeed = document.querySelector('.write-feed');
-var writeFeedText = document.querySelector('.write-feed__text');
+var page1 = document.querySelector('.page1');
+var page2 = document.querySelector('.page2');
+var scrollArea34 = document.querySelector('.scroll-area.page3-4');
+var scrollArea67 = document.querySelector('.scroll-area.page6-7');
+var scrollArea910 = document.querySelector('.scroll-area.page9-10');
+var page5 = document.querySelector('.page5');
+var page6 = document.querySelector('.page6');
+var page7 = document.querySelector('.page7');
+var page8 = document.querySelector('.page8');
+var page9 = document.querySelector('.page9');
+var page10 = document.querySelector('.page10');
+var page11 = document.querySelector('.page11');
+var page12 = document.querySelector('.page12');
+var page13 = document.querySelector('.page13');
+var page14 = document.querySelector('.page14');
+var page15 = document.querySelector('.page15');
+var page16 = document.querySelector('.page16');
+var page17 = document.querySelector('.page17');
 
-window.home = function () {
-  location.reload();
+window.handleClickMenu = function () {
+  page2.classList.add('show');
 };
 
-window.brand = function () {
-  //change main image
-  if (mainPage.classList.contains('hide')) {
-    return false;
-  }
-
-  mainImage1.classList.add('hide');
-  mainImage2.classList.remove('hide');
-  imageSliderNav.classList.remove('hide');
-  contentName.textContent = '伊勢丹新宿店';
-  date.textContent = ' 2019.9.4wed-17tue';
-  likeText.textContent = 'いいね！285件';
-  contentText.innerHTML = "YOAK Pop-Up<br>on Men's Building <a class=\"\" href=\"/explore/tags/b1f_mensshoes/\">#B1F_MensShoes</a><br>\u30FB<br><a class=\"\" href=\"/explore/tags/yoak/\">#yoak</a><br>\u30FB<br>www.imn.jp";
-  footer.querySelector('.active').classList.remove('active');
-  footer.querySelector('.person').classList.add('active');
-  document.body.scrollTop = 0;
+window.handleClickServiceBooking = function () {
+  console.log('handleClickServiceBooking');
+  page1.classList.add('hide');
+  page2.classList.add('hide');
+  scrollArea34.classList.remove('hide');
 };
 
-window.writeFeed = function () {
-  console.log(feedPage1);
-  homeHeader.classList.add('hide');
-  feedHeader1.classList.remove('hide');
-  mainPage.classList.add('hide');
-  feedPage1.classList.remove('hide');
-  footer.querySelector('.active').classList.remove('active');
-  document.body.scrollTop = 0;
+window.handleClickBooking = function () {
+  console.log('handleClickBooking');
+  scrollArea34.classList.add('hide');
+  page5.classList.remove('hide');
 };
 
-window.moveFeed2 = function () {
-  feedPage1.classList.add('hide');
-  feedPage2.classList.remove('hide');
-  feedHeader1.classList.add('hide');
-  feedHeader2.classList.remove('hide');
+window.handleClickAttendBooking = function () {
+  console.log('handleClickAttendBooking');
+  page5.classList.add('hide');
+  scrollArea67.classList.remove('hide');
 };
 
-window.moveFeed3 = function () {
-  feedPage2.classList.add('hide');
-  feedPage3.classList.remove('hide');
-  feedHeader2.classList.add('hide');
-  feedHeader3.classList.remove('hide');
+window.handleClick13Booking = function () {
+  console.log('handleClickServiceBooking');
+  scrollArea67.classList.add('hide');
+  page8.classList.remove('hide');
 };
 
-window.animationKey = false;
-
-window.keyboardAnimation = function () {
-  event.preventDefault();
-
-  if (animationKey) {
-    return false;
-  }
-
-  animationKey = true;
-  var text = '伊勢丹メンズ館でオーダーしたシャツが最高過ぎ！迷っていたシャツも買っちゃおうかな〜 #isetanmens #カスタムオーダーシャツ';
-  feed3Textarea.value = '';
-
-  for (var i = 0, len = text.length; i < len; i++) {
-    delayAnimation(text, i);
-  }
-
-  function delayAnimation(text, index) {
-    setTimeout(function () {
-      feed3Textarea.value = feed3Textarea.value + text[index];
-
-      if (text.length - 1 == index) {
-        animationKey = false;
-      }
-    }, 100 * index);
-  }
+window.handleClickNextOnPage8 = function () {
+  console.log('handleClickServiceBooking');
+  page8.classList.add('hide');
+  scrollArea910.classList.remove('hide');
 };
 
-window.share = function () {
-  feedPage3.classList.add('hide');
-  mainPage.classList.remove('hide');
-  feedHeader3.classList.add('hide');
-  homeHeader.classList.remove('hide');
-  contentName.classList.add('hide');
-  contentImage.classList.add('hide');
-  contentImageShare.classList.remove('hide');
-  contentUserName.textContent = "user name";
-  footer.querySelector('.home').classList.add('active');
-  storeInfo.classList.add('loading');
-  mainImage3.classList.add('loading');
-  mainImage1.classList.add('hide');
-  mainImage2.classList.add('hide');
-  mainImage3.classList.remove('hide');
-  writeFeed.classList.remove('hide');
-  setTimeout(function () {
-    date.textContent = ' 2019.9.24';
-    likeText.textContent = 'いいね！0件';
-    storeInfo.classList.remove('loading');
-    mainImage3.classList.remove('loading');
-    progress.classList.add('hide');
-    writeFeedText.textContent = "完了";
-  }, 5000);
-};
-
-window.showTooltip = function () {
-  if (event.target.classList.contains('like')) {
-    event.target.querySelector('.tooltip').classList.toggle('hide');
-  } else {
-    activity();
-  }
-};
-
-window.activity = function () {
-  homeHeader.classList.add('hide');
-  activityHeader.classList.remove('hide');
-  mainPage.classList.add('hide');
-  activityPage.classList.remove('hide');
-  document.querySelector('.tooltip').classList.add('hide');
-};
-
-window.photo = function () {
-  activityHeader.classList.add('hide');
-  activityPage.classList.add('hide');
-  photoHeader.classList.remove('hide');
-  photoPage.classList.remove('hide');
+window.handleClickNextOnPage10 = function () {
+  console.log('handleClickServiceBooking');
+  scrollArea910.classList.add('hide');
+  page11.classList.remove('hide');
 };
 },{}],"../../AppData/Roaming/npm/node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
@@ -298,7 +205,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "62386" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "60796" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
