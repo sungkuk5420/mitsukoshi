@@ -41,6 +41,22 @@ body {
   height: 8vh;
   bottom: 21.9vh;
 }
+.page-image.page2 .page2__message {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-size: 4.5vw;
+  color: #7b7c7b;
+  font-weight: 600;
+  width: 65vw;
+  bottom: 0vh;
+  position: absolute;
+  padding: 5vw 4vw;
+  border-top: 1px solid #e9eae8;
+  border-bottom: 1px solid #e9eae8;
+  background: #fdfefc;
+  height: 9vh;
+}
 .page-image.page3 {
   height: 87vh;
   background-image: url(/page3.6f4cc0ae.png);
@@ -167,6 +183,25 @@ body {
 }
 .page-image.page11 .page11__message:first-child {
   top: 46vh;
+}
+.page-image.page11 .page11__reload {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-size: 6vw;
+  color: #282828;
+  font-weight: 700;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  bottom: 0;
+  position: absolute;
+  left: 0vw;
+  height: 8vh;
+  width: 24vw;
 }
 
 .scroll-area {
